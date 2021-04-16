@@ -1,15 +1,6 @@
 import prompt
 from random import randint
-
-
-def welcome_user():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    greeting = 'Hello'
-    template = '{}, {}!'
-    print(template.format(greeting, name))
-    print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
-    return name
+import engine
 
 
 def is_an_even_number(num, answer, name):
@@ -28,7 +19,8 @@ def is_an_even_number(num, answer, name):
 
 
 def repit_task():
-    name = welcome_user()
+    name = engine.welcome_user()
+    print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
     counter = 0
     while counter < 3:
         random_number = randint(1,100)
@@ -44,4 +36,3 @@ def repit_task():
     string = 'Congratulations'
     template = '{}, {}!'
     print(template.format(string, name))
-    
