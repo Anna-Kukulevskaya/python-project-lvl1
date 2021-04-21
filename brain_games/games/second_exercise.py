@@ -1,6 +1,6 @@
 import prompt
 from random import randint, choice
-import engine
+import brain_games.engine
 
 
 def generating_numbers():
@@ -33,7 +33,7 @@ def check(random_expression, answer, name):
     
 
 def repit_task():
-    name = engine.welcome_user()
+    name = brain_games.engine.welcome_user()
     print('What is the result of the expression?')
     counter = 0
     while counter < 3:

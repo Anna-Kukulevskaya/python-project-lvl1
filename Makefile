@@ -1,7 +1,7 @@
 install:
 	poetry install
-brain-even:
-	poetry run brain-even
+brain-calc:
+	poetry run brain-calc
 build:
 	poetry build
 publish:
@@ -9,4 +9,4 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 lint:
-	poetry run flake8 brain-even
+	poetry run flake8 brain-calc

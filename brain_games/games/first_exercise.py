@@ -1,6 +1,6 @@
 import prompt
 from random import randint
-import engine
+import brain_games.engine
 
 
 def is_an_even_number(num, answer, name):
@@ -19,7 +19,7 @@ def is_an_even_number(num, answer, name):
 
 
 def repit_task():
-    name = engine.welcome_user()
+    name = brain_games.engine.welcome_user()
     print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
     counter = 0
     while counter < 3:
