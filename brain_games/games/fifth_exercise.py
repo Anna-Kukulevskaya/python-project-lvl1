@@ -20,12 +20,12 @@ def is_prime(num):
 def check(num, answer, name):
     if is_prime(num) is True and answer == 'yes':
         return "Correct!"
-    elif is_prime(num) is False and answer == 'yes':
+    elif is_prime(num) == False and answer == 'yes':
         string1 = 'is wrong answer ;(. Correct answer was'
         string2 = '\nLet\'s try again'
         template = '{}{}, {}!'
         return template.format(string1, string2, name)
-    elif is_prime(num) is False and answer == 'no':
+    elif is_prime(num) == False and answer == 'no':
         return "Correct!"
     else:
         string1 = 'is wrong answer ;(. Correct answer was'
