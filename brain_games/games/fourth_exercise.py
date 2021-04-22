@@ -16,18 +16,18 @@ def calc_answer_comp(num, difference, n):
 
 
 def progression(num, difference, length, n):
-    result = ''
+    result = ""
     i = 0
     while i < length:
         if i == n:
             if n == 0:
-                result = result + '..'
+                result = result + ".."
             else:
-                result = result + ' ' + '..'
+                result = result + " " + ".."
         elif i == 0:
             result = result + str(num)
         else:
-            result = result + ' ' + str(num)
+            result = result + " " + str(num)
         num = num + difference
         i = i + 1
         print(result)
@@ -36,31 +36,31 @@ def progression(num, difference, length, n):
 
 def check(n, answer, name):
     if answer == n:
-        return 'Correct!'
+        return "Correct!"
     else:
-        string1 = 'is wrong answer ;(. Correct answer was'
-        string2 = '\nLet\'s try again'
-        template = '{} {} {}. {}, {}!'
+        string1 = "is wrong answer ;(. Correct answer was"
+        string2 = "\nLet\'s try again"
+        template = "{} {} {}. {}, {}!"
         return template.format(answer, string1, n, string2, name)
 
 
 def repit_task():
     name = brain_games.engine.welcome_user()
-    print('What number is missing in the progression?')
+    print("What number is missing in the progression?")
     counter = 0
     while counter < 3:
         random_sequence = generating_numbers()
         num, difference, length, n = random_sequence
-        print('Question:', progression(num, difference, length, n))
-        answer = int(prompt.string('Your answer: '))
+        print("Question:", progression(num, difference, length, n))
+        answer = int(prompt.string("Your answer: "))
         answer_comp = calc_answer_comp(num, difference, n)
         string = check(answer_comp, answer, name)
-        if string == 'Correct!':
+        if string == "Correct!":
             counter = counter + 1
             print(string)
         else:
             print(string)
             return
-    string = 'Congratulations'
-    template = '{}, {}!'
+    string = "Congratulations"
+    template = "{}, {}!"
     print(template.format(string, name))

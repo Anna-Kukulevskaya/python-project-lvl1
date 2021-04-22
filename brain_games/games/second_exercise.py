@@ -6,47 +6,47 @@ import brain_games.engine
 def generating_numbers():
     num1 = randint(1, 100)
     num2 = randint(1, 100)
-    operators = ['+', '-', '*']
+    operators = ["+", "-", "*"]
     operator = choice(operators)
-    print('Question:', num1, operator, num2)
+    print("Question:", num1, operator, num2)
     return num1, operator, num2
 
 
 def calc(num1, operator, num2):
-    if operator == '+':
+    if operator == "+":
         return num1 + num2
-    if operator == '-':
+    if operator == "-":
         return num1 - num2
-    if operator == '*':
+    if operator == "*":
         return num1 * num2
 
 
 def check(random_expression, answer, name):
     num1, operator, num2 = random_expression
     if answer == calc(num1, operator, num2):
-        return 'Correct!'
+        return "Correct!"
     if answer != calc(num1, operator, num2):
-        string1 = 'is wrong answer ;(. Correct answer was'
-        string2 = '\nLet\'s try again'
-        template = '{} {} {}. {}, {}!'
+        string1 = "is wrong answer ;(. Correct answer was"
+        string2 = "\nLet\'s try again"
+        template = "{} {} {}. {}, {}!"
         result = calc(num1, operator, num2)
         return template.format(answer, string1, result, string2, name)
 
 
 def repit_task():
     name = brain_games.engine.welcome_user()
-    print('What is the result of the expression?')
+    print("What is the result of the expression?")
     counter = 0
     while counter < 3:
         random_expression = generating_numbers()
-        answer = int(prompt.string('Your answer: '))
+        answer = int(prompt.string("Your answer: "))
         string = check(random_expression, answer, name)
-        if string == 'Correct!':
+        if string == "Correct!":
             counter = counter + 1
             print(string)
         else:
             print(string)
             return
-    string = 'Congratulations'
-    template = '{}, {}!'
+    string = "Congratulations"
+    template = "{}, {}!"
     print(template.format(string, name))

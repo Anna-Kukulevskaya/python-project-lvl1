@@ -6,5 +6,5 @@ def main():
     brain_games.games.second_exercise.repit_task()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
