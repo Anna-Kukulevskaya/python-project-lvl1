@@ -8,4 +8,3 @@ def welcome_user():
     template = '{}, {}!'
     print(template.format(greeting, name))
     return name
-    
