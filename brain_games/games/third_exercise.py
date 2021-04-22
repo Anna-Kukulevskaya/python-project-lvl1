@@ -43,8 +43,8 @@ def repit_task():
             counter = counter + 1
             print(string)
         else:
-            counter = 0
             print(string)
+            return
     string = 'Congratulations'
     template = '{}, {}!'
     print(template.format(string, name))
