@@ -21,15 +21,17 @@ def check(num, answer, name):
     if is_prime(num) == True and answer == 'yes':
         return "Correct!"
     elif is_prime(num) == False and answer == 'yes':
-        string = '\'yes\' is wrong answer ;(. Correct answer was \'no\'.\nLet\'s try again'
-        template = '{}, {}!'
-        return template.format(string, name)
+        string1 = 'is wrong answer ;(. Correct answer was'
+        string2 = '\nLet\'s try again'
+        template = '{}{}, {}!'
+        return template.format(string1, string2, name)
     elif is_prime(num) == False and answer == 'no':
         return "Correct!"
     else:
-        string = '\'yes\' is wrong answer ;(. Correct answer was \'no\'.\nLet\'s try again'
-        template = '{}, {}!'
-        return template.format(string, name)
+        string1 = 'is wrong answer ;(. Correct answer was'
+        string2 = '\nLet\'s try again'
+        template = '{}{}, {}!'
+        return template.format(string1, string2, name)
 
 
 def repit_task():

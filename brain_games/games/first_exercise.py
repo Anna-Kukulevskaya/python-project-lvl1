@@ -7,15 +7,17 @@ def is_an_even_number(num, answer, name):
     if num % 2 == 0 and answer == 'yes':
         return 'Correct!'
     elif num % 2 == 0 and answer == 'no':
-        string = '\'no\' is wrong answer ;(. Correct answer was \'yes\'.\nLet\'s try again'
-        template = '{}, {}!'
-        return template.format(string, name)
+        string1 = 'is wrong answer ;(. Correct answer was'
+        string2 = '\nLet\'s try again'
+        template = '{}{}, {}!'
+        return template.format(string1, string2, name)
     elif num % 2 != 0 and answer == 'no':
         return 'Correct!'
     else:
-        string = '\'yes\' is wrong answer ;(. Correct answer was \'no\'.\nLet\'s try again'
-        template = '{}, {}!'
-        return template.format(string, name)
+        string1 = 'is wrong answer ;(. Correct answer was'
+        string2 = '\nLet\'s try again'
+        template = '{}{}, {}!'
+        return template.format(string1, string2, name)
 
 
 def repit_task():
