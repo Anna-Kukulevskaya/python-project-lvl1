@@ -1,4 +1,4 @@
-from random import randint, choice
+from random import choice, randint
 
 import brain_games.engine
 import prompt
