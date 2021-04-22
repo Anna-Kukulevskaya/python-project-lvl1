@@ -1,6 +1,7 @@
-import prompt
 from random import randint
+
 import brain_games.engine
+import prompt
 
 
 def generating_numbers():
@@ -39,7 +40,7 @@ def check(n, answer, name):
         return "Correct!"
     else:
         string1 = "is wrong answer ;(. Correct answer was"
-        string2 = "\nLet\'s try again"
+        string2 = "\nLet's try again"
         template = "{} {} {}. {}, {}!"
         return template.format(answer, string1, n, string2, name)
 

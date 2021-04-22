@@ -1,6 +1,7 @@
-import prompt
 from random import randint
+
 import brain_games.engine
+import prompt
 
 
 def generating_numbers():
@@ -24,7 +25,7 @@ def check_the_divisor(answer_comp, answer, name):
         return "Correct!"
     else:
         string1 = "is wrong answer ;(. Correct answer was"
-        string2 = "\nLet\'s try again"
+        string2 = "\nLet's try again"
         template = "{} {} {}. {}, {}!"
         return template.format(answer, string1, answer_comp, string2, name)
 

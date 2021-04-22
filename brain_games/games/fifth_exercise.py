@@ -1,6 +1,7 @@
-import prompt
 from random import randint
+
 import brain_games.engine
+import prompt
 
 
 def random_number():
@@ -22,21 +23,21 @@ def check(num, answer, name):
         return "Correct!"
     elif is_prime(num) is False and answer == "yes":
         string1 = "is wrong answer ;(. Correct answer was"
-        string2 = "\nLet\'s try again"
+        string2 = "\nLet's try again"
         template = "{}{}, {}!"
         return template.format(string1, string2, name)
     elif is_prime(num) is False and answer == "no":
         return "Correct!"
     else:
         string1 = "is wrong answer ;(. Correct answer was"
-        string2 = "\nLet\'s try again"
+        string2 = "\nLet's try again"
         template = "{}{}, {}!"
         return template.format(string1, string2, name)
 
 
 def repit_task():
     name = brain_games.engine.welcome_user()
-    print("Answer \"yes\" if given number is prime. Otherwise answer \"no\".")
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     counter = 0
     while counter < 3:
         given_number = random_number()

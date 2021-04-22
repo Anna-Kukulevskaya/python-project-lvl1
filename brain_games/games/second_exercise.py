@@ -1,6 +1,7 @@
-import prompt
 from random import randint, choice
+
 import brain_games.engine
+import prompt
 
 
 def generating_numbers():
@@ -27,7 +28,7 @@ def check(random_expression, answer, name):
         return "Correct!"
     if answer != calc(num1, operator, num2):
         string1 = "is wrong answer ;(. Correct answer was"
-        string2 = "\nLet\'s try again"
+        string2 = "\nLet's try again"
         template = "{} {} {}. {}, {}!"
         result = calc(num1, operator, num2)
         return template.format(answer, string1, result, string2, name)
