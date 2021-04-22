@@ -20,11 +20,17 @@ def progression(num, difference, length, n):
     i = 0
     while i < length:
         if i == n:
-            result = result + ' ' + '..'
+            if n == 0:
+                result = result + '..'
+            else:
+                result = result + ' ' + '..'
+        elif i == 0:
+            result = result + str(num)
         else:
             result = result + ' ' + str(num)
         num = num + difference
         i = i + 1
+        print(result)
     return result
 
 
