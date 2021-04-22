@@ -38,7 +38,7 @@ def repit_task():
     counter = 0
     while counter < 3:
         given_number = random_number()
-        print('Question: ', given_number)
+        print('Question:', given_number)
         answer = prompt.string('Your answer: ')
         right_answer = is_prime(given_number)
         string = check(given_number, answer, name)

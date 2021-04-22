@@ -6,7 +6,7 @@ import brain_games.engine
 def generating_numbers():
     num1 = randint(1,100)
     num2 = randint(1,100)
-    print('Question: ', num1 , num2 )
+    print('Question:', num1 , num2 )
     return num1, num2
 
 

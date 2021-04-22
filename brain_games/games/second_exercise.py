@@ -8,7 +8,7 @@ def generating_numbers():
     num2 = randint(1,100)
     operators = ['+', '-', '*']
     operator = choice(operators)
-    print('Question: ', num1 , operator , num2 )
+    print('Question:', num1 , operator , num2 )
     return num1, operator, num2
 
 

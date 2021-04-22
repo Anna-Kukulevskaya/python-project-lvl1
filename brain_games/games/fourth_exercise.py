@@ -45,7 +45,7 @@ def repit_task():
     while counter < 3:
         random_sequence = generating_numbers()
         num, difference, length, n = random_sequence
-        print('Question: ', progression(num, difference, length, n))
+        print('Question:', progression(num, difference, length, n))
         answer = int(prompt.string('Your answer: '))
         answer_comp = calc_answer_comp(num, difference, n)
         string = check(answer_comp, answer, name)
