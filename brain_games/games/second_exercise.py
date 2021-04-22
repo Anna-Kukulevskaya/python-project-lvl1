@@ -29,8 +29,8 @@ def check(random_expression, answer, name):
         string1 = 'is wrong answer ;(. Correct answer was'
         string2 = '\nLet\'s try again'
         template = '{} {} {}. {}, {}!'
-        return template.format(answer, string1,\
-            calc(num1, operator, num2), string2, name)
+        result = calc(num1, operator, num2)
+        return template.format(answer, string1, result, string2, name)
 
 
 def repit_task():
