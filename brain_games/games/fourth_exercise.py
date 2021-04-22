@@ -4,9 +4,9 @@ import brain_games.engine
 
 
 def generating_numbers():
-    num = randint(1,100)
-    difference = randint(1,100)
-    length = randint(5,10)
+    num = randint(1, 100)
+    difference = randint(1, 100)
+    length = randint(5, 10)
     n = randint(0, length - 1)
     return num, difference, length, n
 

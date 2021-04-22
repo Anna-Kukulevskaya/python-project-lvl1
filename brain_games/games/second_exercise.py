@@ -4,11 +4,11 @@ import brain_games.engine
 
 
 def generating_numbers():
-    num1 = randint(1,100)
-    num2 = randint(1,100)
+    num1 = randint(1, 100)
+    num2 = randint(1, 100)
     operators = ['+', '-', '*']
     operator = choice(operators)
-    print('Question:', num1 , operator , num2 )
+    print('Question:', num1, operator, num2)
     return num1, operator, num2
 
 
@@ -30,7 +30,7 @@ def check(random_expression, answer, name):
         string2 = '\nLet\'s try again'
         template = '{} {} {}. {}, {}!'
         return template.format(answer, string1, calc(num1, operator, num2), string2, name)
-    
+
 
 def repit_task():
     name = brain_games.engine.welcome_user()
